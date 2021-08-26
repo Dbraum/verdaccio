@@ -45,14 +45,16 @@ uplinks:
     url: https://registry.npmjs.org/
   cnpm:
     url: https://registry.npm.taobao.org/
+  deepexi:
+    url: https://npm-frontend-infra.deepexi.com/
 
 packages:
-  '@*/*':
+  '@femessage/*':
     # scoped packages
     access: $all
     publish: $authenticated
     unpublish: $authenticated
-    proxy: cnpm
+    proxy: deepexi
 
   '**':
     # allow all users (including non-authenticated users) to read and
